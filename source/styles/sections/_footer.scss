@@ -1,0 +1,12 @@
+// This is an example file.
+footer {
+  position: relative;
+}
+.thank-you svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: $based-spacing * 4;
+  left: 0;
+  z-index: 3;
+}

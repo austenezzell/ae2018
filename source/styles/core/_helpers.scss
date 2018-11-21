@@ -1,0 +1,92 @@
+// Helper classes
+
+// Disable pointer
+.pe-none {
+  pointer-events: none;
+}
+
+// Text and background color generator
+@each $color, $value in $css-colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+
+  .color-#{$color} {
+    color: $value;
+  }
+}
+
+.pos-fixed {
+  position: fixed;
+}
+.vh-100 {
+  height: 100vh;
+}
+.vh-80 {
+  height: 80vh;
+}
+.vh-90 {
+  height: 90vh;
+}
+.w-100 {
+  width: 100%;
+  height: auto;
+}
+.min-vh-100 {
+  min-height: 100vh;
+}
+.min-vh-50 {
+  min-height: 50vh;
+}
+// .vert-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+.middle-full {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-half {
+  justify-content: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-70 {
+  justify-content: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle-80 {
+  justify-content: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.w-100 {
+  width: 100%;
+}
+
+
+
+.new-window {
+  position: relative;
+  margin-right: 20px;
+  &:after {
+    position: absolute;
+    right: -18px;
+    top: 0;
+    width: 16px;
+    height: 90%;
+    content: '';
+    background-size: 100%;
+    background-image: url('../assets/images/link_arrow.svg');
+    background-repeat: no-repeat;
+  }
+}

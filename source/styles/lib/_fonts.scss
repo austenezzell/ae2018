@@ -1,0 +1,84 @@
+// // Font settings
+//
+// @mixin font {
+//   // sass-lint:disable-block indentation
+//   $_path: '/assets/fonts/';
+//   $font-regular: 'big_caslon/Big-Caslon-Rom';
+//   $font-sans: 'basis_grotesque/BasisGrotesquePro-Medium';
+//
+//   @font-face {
+//     font-family: 'Big Caslon Rom';
+//     src: url('#{$_path}#{$font-regular}.woff') format('woff'),
+//       url('#{$_path}#{$font-regular}.ttf') format('truetype'),
+//       url('#{$_path}#{$font-regular}.otf') format('otf');
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+//
+//   @font-face {
+//     font-family: 'Basis Grotesque Pro Medium';
+//     src: url('#{$_path}#{$font-sans}.woff') format('woff'),
+//       url('#{$_path}#{$font-sans}.ttf') format('truetype'),
+//       url('#{$_path}#{$font-sans}.otf') format('otf');
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+// }
+//
+// @mixin regular-font {
+//   font-family: 'Big Caslon Rom',  serif;
+//   font-style: normal;
+//   font-weight: 400;
+// }
+//
+// @mixin sans-font {
+//   font-family: 'Basis Grotesque Pro Medium', sans-serif;
+//   font-style: normal;
+// }
+
+// NOTO SERIF
+@mixin serif-font {
+  font-family: noto-serif, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin serif-italic-font {
+  font-family: noto-serif, serif;
+  font-weight: 400;
+  font-style: italic;
+}
+@mixin serif-bold-font {
+  font-family: noto-serif, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin serif-bold-italic-font {
+  font-family: noto-serif, serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+// NOTO SANS
+@mixin sans-font {
+  font-family: noto-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin sans-italic-font {
+  font-family: noto-sans, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin sans-bold-font {
+  font-family: noto-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin sans-bold-italic-font {
+  font-family: noto-sans, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}

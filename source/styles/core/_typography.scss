@@ -1,0 +1,63 @@
+// Typography
+
+%h {
+  @include sans-font;
+  margin-top: ($spacing * 2);
+  margin-bottom: 0;
+  line-height: $line-height--heading;
+  font-weight: 400;
+  + p {
+    margin-top: 0;
+  }
+}
+
+h1,
+.h1 {
+  @extend %h;
+  @include font-size(h1);
+}
+.h1-alt {
+  @extend %h;
+  @include font-size(h1);
+  @include serif-font;
+
+}
+
+h2,
+.h2 {
+  @extend %h;
+  @include font-size(h2);
+}
+
+h3,
+.h3 {
+  @extend %h;
+  @include font-size(h3);
+}
+
+h4,
+.h4 {
+  @extend %h;
+  @include font-size(h4);
+}
+
+h5,
+.h5 {
+  @extend %h;
+  @include font-size(h5);
+}
+
+p,
+.p {
+  @include font-size(base);
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+  @include sans-font;
+}
+.p-alt {
+  @include serif-font;
+}
+small,
+.small {
+  font-size: 80%;
+}

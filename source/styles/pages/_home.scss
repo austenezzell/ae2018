@@ -1,0 +1,146 @@
+// Homepage styles
+
+// .hi {
+//   height: 100%;
+//   width: 100%;
+//   color: $color-black;
+//   background: $color-primary;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 999;
+//   animation-fill-mode: forwards;
+//   animation-delay: 1.6s;
+//   animation-duration: 1s;
+//   animation-name: fade-out;
+//   p {
+//     animation-fill-mode: forwards;
+//     animation-duration: .4s;
+//     animation-name: in-right;
+//   }
+// }
+
+.intro {
+  z-index: 1;
+  position: relative;
+}
+
+.me {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  transition: opacity, .2s;
+}
+
+.featured-work {
+  .no-margin-row {
+    margin: 0 0 $based_spacing;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+}
+
+.project {
+  background: white;
+  min-height: 100vh;
+}
+.landscape-img-placeholder {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+.portrait-img-placeholder {
+  height: 110vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: $based_spacing;
+}
+.portrait-text-col {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.the-more {
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, .2s;
+
+
+}
+.active {
+  .the-more {
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  .me {
+    opacity: 0;
+  }
+}
+
+.about {
+  background: $color-primary;
+}
+
+.more-images {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 4;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 6;
+    background: black;
+  }
+  .slide {
+    display: none;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    &.active {
+      display: block;
+    }
+    .row {
+      height: 90vh;
+      position: relative;
+      top: 10vh;
+    }
+    .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  p {
+    color: white;
+  }
+  img {
+     width: 100%;
+     height: auto;
+
+  }
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
