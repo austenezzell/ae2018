@@ -4,7 +4,7 @@
 $font-size: 20px;
 $font-scaling: 1.35;
 $line-height: 1.5;
-$line-height--heading: 1.25;
+$line-height--heading: 1.35;
 
 $spacing: $based_spacing; //see config.based
 $breakpoints: $based_grid-breakpoints; //see config.based
@@ -13,6 +13,9 @@ $color-black: #000;
 $color-primary: #000;
 $color-secondary: #5E9F63;
 $color-gray: #AFAFAF;
+$color-red: #FC0D1C;
+$color-blue: #0B53B3;
+$color-green: #17A457;
 
 $css-colors: (
     dark: $color-black,

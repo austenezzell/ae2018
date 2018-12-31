@@ -73,7 +73,9 @@
   width: 100%;
 }
 
-
+.mt-half {
+  margin-top: $based-spacing * .5;
+}
 
 .new-window {
   position: relative;
@@ -81,12 +83,12 @@
   &:after {
     position: absolute;
     right: -18px;
-    top: 0;
+    top: 10%;
     width: 16px;
     height: 90%;
-    content: '';
-    background-size: 100%;
-    background-image: url('../assets/images/link_arrow.svg');
+    content: '\2197';
+    font-size: 70%;
+    // background-image: url('../assets/images/link_arrow.svg');
     background-repeat: no-repeat;
   }
 }

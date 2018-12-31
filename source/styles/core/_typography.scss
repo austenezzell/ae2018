@@ -11,16 +11,22 @@
   }
 }
 
+
 h1,
 .h1 {
   @extend %h;
-  @include font-size(h1);
+  @include font-size(h3);
+  @include breakpoint(md) {
+    @include font-size(h1);
+  }
 }
 .h1-alt {
   @extend %h;
-  @include font-size(h1);
   @include serif-font;
-
+  @include font-size(h3);
+  @include breakpoint(md) {
+    @include font-size(h1);
+  }
 }
 
 h2,
@@ -33,6 +39,7 @@ h3,
 .h3 {
   @extend %h;
   @include font-size(h3);
+  line-height: 1.5;
 }
 
 h4,
@@ -60,4 +67,11 @@ p,
 small,
 .small {
   font-size: 80%;
+}
+.italic-bold {
+  @include serif-bold-font
+}
+
+.serif-font {
+  @include serif-font;
 }

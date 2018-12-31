@@ -10,6 +10,51 @@ body {
   background: $color-black;
 }
 
+body.red-text {
+  color: $color-red;
+  a {
+    color: $color-red;
+  }
+}
+
+.blue-bg {
+
+  .main-container {
+    background: $color-blue;
+    .project {
+      background: $color-blue;
+    }
+  }
+}
+
+.black-bg {
+  color: white;
+  a {
+    color: white;
+  }
+  .main-container {
+    background: $color-black;
+    .project {
+      background: black;
+    }
+  }
+}
+
+.blue-text {
+  color: $color-blue;
+  a {
+    color: $color-blue
+  }
+}
+
+.green-text {
+  color: $color-green;
+  a {
+    color: $color-green
+  }
+}
+
+
 .main-container {
   background: #F6F4F4;
 }

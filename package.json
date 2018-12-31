@@ -54,6 +54,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "based.css": "^1.0.3"
+    "based.css": "^1.0.3",
+    "in-view": "^0.6.1"
   }
 }

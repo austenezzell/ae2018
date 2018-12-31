@@ -1,6 +1,10 @@
 // This is an example file.
 footer {
   position: relative;
+  width: 100%;
+  h1, .h1 {
+    // @include font-size(h4);
+  }
 }
 .thank-you svg {
   width: 100%;

@@ -21,11 +21,13 @@
 import hi from './components/hi';
 import readMore from './components/read-more';
 import morePhotos from './components/more-photos';
+import lazyLoad from './components/lazyload';
 function app() {
 
-  // hi();
+  hi();
   readMore();
   morePhotos();
+  lazyLoad();
 
 
 
