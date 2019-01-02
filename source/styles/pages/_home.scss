@@ -40,11 +40,14 @@
   }
 }
 .logo {
-  height: 100px;
+  height: 80px;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
   display: inline-flex;
+  @include breakpoint(md) {
+    height: 100px;
+  }
   img.vert {
     height: 34px;
     width: auto;
@@ -55,23 +58,6 @@
   }
 }
 
-// .logo-grid {
-//   margin-top: $based_spacing;
-// }
-// .logos .logo {
-//   display: inline-block;
-//   text-align: center;
-//   display: inline-flex;
-//   height: 120px;
-//   img {
-//     margin: 30px 60px 0 0;
-//     max-height: 34px;
-//     max-width: 90px;
-//     align-items: center;
-//     -ms-flex-pack: center;
-//     justify-content: center;
-//   }
-// }
 .me {
   position: absolute;
   top: 0;
@@ -89,17 +75,23 @@
       height: 100%;
     }
   }
+  .slide-count {
+    display: none;
+  }
 }
 
 .featured-work {
   position: relative;
-  a p.title {
-    color: black;
+  .accordionItem p {
     text-decoration: none;
-    margin: 8px 0 16px;
+    margin: 2px 0 16px;
     @include breakpoint(md) {
-      margin: 32px 0;
+      margin: 8px 0 32px;
     }
+  }
+  span.slide-count {
+    position: absolute;
+    right: 32px;
   }
 }
 
@@ -149,6 +141,7 @@ ul.project {
 }
 .secondary-asset {
   display: none;
+  pointer-events: none;
   &.active {
     display: inline-flex;
   }
@@ -184,48 +177,7 @@ ul.project {
     }
   }
 }
-// .featured-work {
-//   .no-margin-row {
-//     margin: 0 0 $based_spacing;
-//     display: -ms-flexbox;
-//     display: flex;
-//     -ms-flex-flow: row wrap;
-//     flex-flow: row wrap;
-//   }
-// }
-//
-// .project {
-//   // background: white;
-//   min-height: 100vh;
-// }
-// .landscape-img-placeholder {
-//   height: 90vh;
-//   background-size: cover;
-//   background-position: center;
-// }
-// .portrait-img-placeholder {
-//   height: 110vh;
-//   background-size: cover;
-//   background-position: center;
-//   margin-bottom: $based_spacing;
-// }
-// .portrait-text-col {
-//   height: 110vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
 
-.the-more {
-  // // display: none;
-  // opacity: 0;
-  // visibility: hidden;
-  // transition: opacity, .2s;
-  // height:0px;
-  // // float:left;
-  // display:block;
-
-}
 .active-bio {
   .me {
     opacity: 0;
@@ -254,58 +206,3 @@ ul.credits {
     }
   }
 }
-//
-// .more-images {
-//   visibility: hidden;
-//   opacity: 0;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: black;
-//   z-index: 4;
-//   header {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 10%;
-//     z-index: 6;
-//     background: black;
-//   }
-//   .slide {
-//     display: none;
-//     position: absolute;
-//     height: 100%;
-//     top: 0%;
-//     left: 0;
-//     width: 100%;
-//     overflow: hidden;
-//     &.active {
-//       display: block;
-//     }
-//     .row {
-//       height: 90vh;
-//       position: relative;
-//       top: 10vh;
-//     }
-//     .col {
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//     }
-//   }
-//   p {
-//     color: white;
-//   }
-//   img {
-//      width: 100%;
-//      height: auto;
-//
-//   }
-//   &.active {
-//     visibility: visible;
-//     opacity: 1;
-//   }
-// }

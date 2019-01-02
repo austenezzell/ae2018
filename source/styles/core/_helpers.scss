@@ -79,16 +79,19 @@
 
 .new-window {
   position: relative;
-  margin-right: 20px;
+  margin-right: 28px;
   &:after {
+    content: '';
     position: absolute;
-    right: -18px;
+    right: -28px;
     top: 10%;
-    width: 16px;
-    height: 90%;
-    content: '\2197';
-    font-size: 70%;
-    // background-image: url('../assets/images/link_arrow.svg');
+    width: 25px;
+    height: 66%;
+    background-image: url(../assets/images/new_window.svg);
     background-repeat: no-repeat;
   }
+}
+
+.word-break {
+  word-break: break-all;
 }

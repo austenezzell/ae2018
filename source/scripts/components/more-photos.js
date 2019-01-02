@@ -4,20 +4,29 @@ export default function() {
   let projectSlides = [];
   let currentSlideCount = [];
   let currentSlide;
+  let slideCount;
+  let slideCountContainer;
+  let totalSlides;
+  let activeSlide;
+
+
 
   for (var i = 0; i < project.length; i++) {
+
+    // console.log(project[i].querySelectorAll('li').length);
+    slideCount = project[i].querySelectorAll('li').length;
+    slideCountContainer = project[i].parentNode.querySelector('.slide-count');
+    totalSlides = project[i].parentNode.querySelector('.totalSlides');
+    totalSlides.textContent = slideCount;
+
     projectSlides.push(project[i].querySelectorAll('.secondary-asset'));
     currentSlideCount.push(0);
     let currentSlide = i;
     project[i].addEventListener('click', e => {
 
+
       if (e.target.tagName.toLowerCase() !== 'a') {
         e.preventDefault();
-        // if (e.target.parentNode.parentNode.nextElementSibling !== null) {
-        //   if (e.target.parentNode.parentNode.nextElementSibling.querySelector('.accordionItem').classList.contains('close')) {
-        //     e.target.parentNode.parentNode.nextElementSibling.querySelector('.accordionItem').className = 'accordionItem open';
-        //   }
-        // }
         if (! e.target.closest('.project').classList.contains('ae')) {
           e.target.parentNode.parentNode.nextElementSibling.querySelector('.accordionItem').className = 'accordionItem open';
         }
@@ -43,6 +52,9 @@ export default function() {
           resetSlides();
           currentSlideCount[currentSlide] = 0;
         }
+
+        activeSlide = e.target.closest('.project').nextElementSibling.querySelector('.activeSlide');
+        activeSlide.textContent = currentSlideCount[currentSlide] + 1;
       }
     });
   }
